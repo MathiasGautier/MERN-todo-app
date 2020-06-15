@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 app.use(cookieParser());
 app.use(express.json());
 
+
 mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser:true,  useUnifiedTopology: true}, ()=>{
     console.log('successfully connected to database👀');
 });
