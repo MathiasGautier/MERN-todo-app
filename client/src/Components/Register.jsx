@@ -45,6 +45,7 @@ function Register(props) {
         <input
           type="text"
           name="username"
+          value={user.username}
           onChange={onChange}
           className="form-control"
           placeholder="Enter user name"
@@ -55,6 +56,7 @@ function Register(props) {
         <input
           type="password"
           name="password"
+          value={user.password}
           onChange={onChange}
           className="form-control"
           placeholder="Enter password"
@@ -65,6 +67,7 @@ function Register(props) {
         <input
           type="text"
           name="role"
+          value={user.role}
           onChange={onChange}
           className="form-control"
           placeholder="Enter role (admin/user)"

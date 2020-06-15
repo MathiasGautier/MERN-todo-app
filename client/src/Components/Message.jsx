@@ -1,23 +1,19 @@
 import React from "react";
 
-const getStyle = (props) => {
-  let baseClass = "alert ";
+const Message = (props) => {
   if (props.message.msgError) {
-    baseClass = baseClass + "alert-danger";
-  } else {
-    baseClass = baseClass + "alert-primary";
-  }
-  return baseClass + "text-center";
-};
-
-function Message(props) {
-  return (
-    <div>
-      <div className={getStyle(props)} role="alert">
+    return (
+      <div className="alert alert-danger text-center" role="alert">
         {props.message.msgBody}
       </div>
-    </div>
-  );
-}
+    );
+  } else {
+    return (
+      <div className="alert alert-primary text-center" role="alert">
+        {props.message.msgBody}
+      </div>
+    );
+  }
+};
 
 export default Message;
